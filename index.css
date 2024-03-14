@@ -641,6 +641,7 @@ input[type="date"]
 
 .card
 {
+    position: relative;
     width: 330px;
     height: 120px;
     background-color: #fff;
@@ -739,6 +740,19 @@ input[type="date"]
 .signup-email-input
 {
     font-size: 12px;
+}
+
+.right-arrow
+{
+    position: absolute;
+    right: 88px;
+    top: 60px;
+    height: 30px;
+    width: 30px;
+    background-image: url("images/right-arrow.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .footer-medium-0
