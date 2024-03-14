@@ -1,0 +1,915 @@
+body
+{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    background-color: teal;
+    overflow-x: hidden;
+    font-family: "Roboto", sans-serif;
+}
+
+u
+{
+    cursor: pointer;
+}
+
+.stars
+{
+    position: absolute;
+    background-image: url("https://static.elfster.com/2024.301.1901.4627/apps/vue/static/images/ssg/hero-badge-desktop.png?813c9946089d36bda632");
+    height: 150px;
+    width: 150px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 150px;
+    right: 180px;
+}
+
+.trusted
+{
+    position: absolute;
+    background-image: url("https://static.elfster.com/2024.301.1901.4627/apps/vue/static/images/ssg/hero-badge-desktop-2.png?6f26ba0d4692775a0703");
+    height: 180px;
+    width: 180px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 270px;
+    right: 50px;
+}
+
+.popuptext {
+    width: 200px;
+    display: none;
+    background-color: rgb(199, 0, 0);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 8px;
+    position: absolute;
+    z-index: 1;
+    bottom: 62px;
+    font-size: 14px;
+    left: 100px;
+  }
+  
+.popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(199, 0, 0) transparent transparent transparent;
+  }
+
+.header
+{
+    background-color: #fff;
+    height: 85px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.elfster-heading-image
+{
+    height: 45px;
+    width: 125px;
+    background-image: url("https://static.elfster.com/2024.301.1901.4627/apps/vue/static/images/elfster-logo-black.png?571319bdd9389d676db9");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.divider
+{
+    background-color: rgb(211, 210, 210);
+    width: 100%;
+    height: 15px;
+    display: flex;
+}
+
+.green-divider
+{
+    background-color: teal;
+    width: 30%;
+}
+
+.back-btn-container
+{
+    position: absolute;
+    background-color: rgb(89, 89, 89);
+    color: #fff;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin-top: 120px;
+    margin-left: 100px;
+}
+
+.form-container
+{
+    background-color: #fff;
+    padding-bottom: 60px;
+}
+
+.form-image
+{
+    width: 100%;
+    height: 650px;
+    background-image: url("https://d5qwdql29d6jm.cloudfront.net/remote/aHR0cHM6Ly9pbWFnZXMuY3RmYXNzZXRzLm5ldC9yYmt6YTZpcXY5ZmgvMWdEMzJWZnJqQlp2dVZmNWY3aFY4Qy9kYTM0ODNkODk3ZDY2OGJmYzg3YjNhNzM3NTQxYTMyYS9saWdodC1iYWNrZ3JvdW5kLWRlc2t0b3AucG5n.7iTd0sIOxTg.png?");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.form-holder
+{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -600px;
+    width: 420px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 2rem;
+    padding: 40px 90px 30px 90px;
+}
+
+.form-content-holder
+{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* form-1 */
+
+.form-1
+{
+    display: flex;
+}
+
+.form-heading
+{
+    font-family: "Roboto Slab", serif;
+    font-size: 26px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.form-start-text
+{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+}
+
+.s1
+{
+    cursor: pointer;
+}
+
+.enter-name
+{
+    font-family: "Roboto Slab", serif;
+    font-weight: 600;
+    color: teal;
+}
+
+.your-name-holder
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.label
+{
+    font-family: "Roboto Slab", serif;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.add-friends-label
+{
+    line-height: 32px;
+}
+
+.group-size-text
+{
+    font-size: 12px;
+    color: teal;
+}
+
+.radio
+{
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.add-friends
+{
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.add-friends-name
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    gap: 25px;
+}
+
+.calender
+{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background-image: url(images/calender.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 26px;
+    left: 380px;
+}
+
+input[type=radio]
+{
+    accent-color: teal;
+    height: 16px;
+    width: 18px;
+}
+
+input[type=radio]:hover
+{
+    cursor: pointer;
+}
+
+.radio-label
+{
+    line-height: 16px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+button
+{
+    cursor: pointer;
+    border: 0;
+}
+
+.add
+{
+    
+    color: teal;
+    background-color: #fff;
+    padding: 0;
+    width: max-content;
+    font-weight: 600;
+}
+
+.party-button-holder
+{
+    width: 100%;
+    text-align: center;
+}
+
+.party-button
+{
+    width: 100%;
+    background-color: teal;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 23px;
+    padding: 10px 0 10px 0;
+}
+
+.party-button-bottom-text
+{
+    font-size: 12px;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+/* form-2 */
+
+.form-2
+{
+    display: none;
+    gap: 30px;
+}
+
+.sending-mail-container
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mail-checkbox
+{
+    display: flex;
+    gap: 10px;
+    color: #6e6e6e;
+    font-size: 16px;
+}
+
+button
+{
+    background-color: #fff;
+    font-family: "Roboto Slab", serif;
+    font-size: 12px;
+    font-weight: 800;
+    width: max-content;
+}
+
+input[type="checkbox"]
+{
+    height: 15px;
+    width: 15px;
+    accent-color: teal;
+    cursor: pointer;
+}
+
+textarea
+{
+
+    resize: none;
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 10px 10px 10px 10px;
+}
+
+textarea:focus
+{
+    border-color: teal;
+}
+
+input
+{
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 10px 10px 10px 10px;
+}
+
+input:focus
+{
+    border-color: teal;
+}
+
+.add-image-all
+{
+    display: none;
+}
+
+.add-image-container, .add-image-container-background
+{
+    z-index: 9999;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-image-container-background
+{
+    opacity: 0.4;
+    background-color: #000000;
+}
+
+.add-image-holder
+{
+    background-color: #fff;
+    width: calc(70% - 8vw);
+    border-radius: 30px;
+    padding: 2vw 4vw 4vw 4vw;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+    overflow-y: hidden;
+}
+
+.crossBtn-holder
+{
+    display: flex;
+    justify-content: right;
+}
+
+.crossBtn
+{
+    font-family: "Roboto", serif;
+    font-size: 25px;
+    font-weight: 200;
+}
+
+.add-image-heading
+{
+    font-family: "Roboto Slab", serif;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.add-image-text
+{
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.add-image-remaining
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vw;
+}
+
+.add-image-image
+{
+    background-image: url("https://d5qwdql29d6jm.cloudfront.net/remote/aHR0cHM6Ly9pbWFnZXMuY3RmYXNzZXRzLm5ldC9yYmt6YTZpcXY5ZmgvMVZMQnN1Sk1vZFBEbXdnSXg5ODgxeC82NDdmNWRmYmViYjczMmFiNzc4NDE5YzM0NWQ4ZmU1NS9kZWZhdWx0LWV4Y2hhbmdlLWltYWdlLnBuZw.Ux8OfI8orlw.png?");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 30vw;
+    width: 30vw;
+}
+
+.symbol
+{
+    position: absolute;
+    top: 32px;
+    left: 10px;
+}
+
+.budget
+{
+    padding-left: 22px;
+}
+
+.dropdown-heard
+{
+    width: 100%;
+    color: black;
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 10px 10px 10px 10px;
+}
+
+.arrow-down
+{
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 30px;
+    left: 380px;
+    background-image: url("images/down-arrow.png");
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+}
+
+input[type="date"]
+{
+    cursor: pointer;
+}
+
+/* form-3 */
+
+.name-drawn-date
+{
+    text-align: center;
+}
+
+.message-info
+{
+    font-size: 12px;
+    padding: 15px;
+    width: calc(100%-20px);
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.form-3
+{
+    display: none;
+}
+
+.msg-info-bold
+{
+    font-weight: 600;
+}
+
+/* footer */
+
+.footer
+{
+    width: 100vw;
+    height: 500px;
+    overflow-x: hidden;
+}
+
+.footer-top
+{
+    background-color: teal;
+    height: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+}
+
+.footer-top-text
+{
+    z-index: 999;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    gap: .5vw;
+}
+
+.footer-top-image
+{
+    height: 40px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.footer-top-image-1
+{
+    background-image: url("https://static.elfster.com/2024.301.1901.4627/apps/vue/static/images/ssg/handshake-heart.png?562d268950c488483ce5");
+}
+
+.footer-top-image-2
+{
+    background-image: url("https://static.elfster.com/2024.301.1901.4627/apps/vue/static/images/landing/stars-group.png?e6a7c111a75eb388921e");
+}
+
+.footer-top-image-3
+{
+    background-image: url("https://static.elfster.com/2024.301.1901.4627/apps/vue/static/images/ssg/trophy.png?c40d5efc6fefa650d74c");
+}
+
+.footer-top-divider
+{
+    background-color: #fff;
+    height: 30px;
+    width: 1px;
+}
+
+.footer-medium
+{
+    height: 67%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.footer-medium-container
+{
+    z-index: 999;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.footer-medium-start
+{
+    height: 45px;
+    width: 125px;
+    background-image: url("https://static.elfster.com/2024.301.1901.4627/apps/vue/static/images/elfster-logo-black.png?571319bdd9389d676db9");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.footer-medium-middle
+{
+    font-family: "Roboto Slab", serif;
+    font-weight: 500;
+    display: flex;
+    gap: 3vw;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.footer-medium-end
+{
+    height: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1.5vw;
+}
+
+.card
+{
+    width: 330px;
+    height: 120px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.01);
+    border-radius: 20px;
+    display: flex;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.card-1
+{
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.insta
+{
+    background-image: url("images/insta.png");
+}
+
+.twitter
+{
+    background-image: url("images/twitter.png");
+}
+
+.facebook
+{
+    background-image: url("images/facebook.png");
+}
+
+.pinterest
+{
+    background-image: url("images/pinterest.png");
+}
+
+.yt
+{
+    background-image: url("images/youtube.png");
+}
+
+.icon
+{
+    height: 20px;
+    width: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* background-color: teal; */
+}
+
+.card-2
+{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.store-images
+{
+    display: flex;
+    gap: 20px;
+}
+
+.store
+{
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.app-store
+{
+    background-image: url("https://static.elfster.com/2024.301.1901.4627/apps/vue/static/images/elfster-ios-app-store-button.png?34fae478a56f36402a42");
+}
+
+.play-store
+{
+    background-image: url("https://static.elfster.com/2024.301.1901.4627/apps/vue/static/images/elfster-android-app-play-store-button.png?7ae26f27a58fb94b93dd");
+}
+
+.card-3
+{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.signup-email-input
+{
+    font-size: 12px;
+}
+
+.footer-medium-0
+{
+    width: 20vw;
+    height: 15vw;
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(240, 249, 247);
+}
+
+.footer-medium-1
+{
+    width: 100vw;
+    height: 100%;
+    background-color: rgb(240, 249, 247);
+}
+
+.footer-medium::before
+{
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100% 100%;
+    width: 19vw;
+    height: 20vw;
+    margin-left: -4vw;
+    background-color: rgb(240, 249, 247);
+}
+
+.footer-medium::after
+{
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100% 100%;
+    width: 12vw;
+    height: calc(0.25*30vw);
+    margin-left: 89.5vw;
+    margin-top: -7.5vw;
+    background-color: teal;
+}
+
+.hider-top
+{
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(240, 249, 247);
+    height: calc(0.35*15vw);
+    width: 5vw;
+    right: 0;
+}
+
+.footer-bottom
+{
+    height: 60px;
+    color: #fff;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.4vw;
+}
+
+.footer-bottom-middle
+{
+    display: flex;
+    gap: .8vw;
+}
+
+.footer-bottom-middle-text
+{
+    cursor: pointer;
+}
+
+.footer-bottom-divider
+{
+    background-color: #fff;
+    height: 15px;
+    width: 1px;
+}
+
+.footer-bottom-end
+{
+    display: flex;
+    gap: .5vw;
+}
+
+select
+{
+    appearance: none;
+    border: 0;
+    width: max-content;
+    font-size: 12px;
+    color: #fff;
+    background-color: teal;
+    cursor: pointer;
+}
+
+@media(max-width: 850px)
+{
+    .stars, .trusted
+    {
+        display: none;
+    }
+
+    .header
+    {
+        position: absolute;
+        right: 0;
+        top: 5vw;
+        background-color: transparent;
+        height: 20vw;
+        width: 30vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .elfster-heading-image
+    {
+        height: 100%;
+        width: 100%;
+        background-image: url("https://static.elfster.com/2024.301.1901.4627/apps/vue/static/images/ssg/hero-badge-mobile.png?61ece04c77352081e3f4");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+    
+    .form-image
+    {
+        height: 35vw;
+    }
+
+    .form-holder
+    {
+        width: 80vw;
+        margin-top: 0;
+        width: calc(100%-100px);
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0;
+    }
+
+    .footer
+    {
+        height: 800px;
+    }
+
+    .footer-top-image
+    {
+        height: 20px;
+    }
+
+    .footer-top-inner-text
+    {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .footer-medium
+    {
+        height: 80%;
+    }
+
+    .footer-medium-end
+    {
+        flex-direction: column;
+        height: 60%;
+        justify-content: center;
+        align-items: center;
+    }
+}
+

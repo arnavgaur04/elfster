@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/present.ico">
+    <script src="index.js" defer></script>
+    <title>Free Secret Santa Generator | Elfster</title>
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="trusted"></div>
+    <div class="add-image-all" id="add-image-all">
+        <div class="add-image-container-background">
+        </div>
+        <div class="add-image-container">
+            <div class="add-image-holder">
+                <div class="crossBtn-holder">
+                    <button class="crossBtn" type="button" onclick="addImage()">X</button>
+                </div>
+                <div class="add-image-remaining">
+                    <div class="add-image-heading">Choose an image</div>
+                    <div class="add-image-text">Like wrapping paper on a gift, set tvibe of your Elfster exchange with the perfect pic. Select an imabelow or  <u>upload your own</u> .</div>
+                    <div class="add-image-image"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button type="button" class="back-btn-container" id="back-btn-container" onclick="goBack()">
+        <div class="back-btn">
+            <
+        </div>
+    </button>
+
+    <div class="header">
+        <div class="elfster-heading-image">
+            
+        </div>
+    </div>
+    <div class="divider">
+        <div class="green-divider" id="green-divider"></div>
+    </div>
+    <div class="form-container">
+        <div class="form-image"></div>
+        <div class="form-holder">
+            <form method="post">
+                <div class="form-content-holder form-1" id="form-1">
+                    <div class="form-heading">Start Your Secret Santa</div>
+                    <div class="form-start-text">
+                        Organize your Elfster exchange lickety-split. You'll be done in less than two minutes. Then get ready to exchange gifts! Already did this last year? <u class="s1">Use your previous exchanges.</u>
+                    </div>
+                    <div class="enter-name">Enter Names</div>
+                    <div class="your-name-holder">
+                        <label class="your-name-label label">
+                            Your Name
+                        </label>
+                        <span class="popuptext" id="myPopup1">Please enter your name</span>
+                        <input type="text" placeholder="Enter Name" id="your-name">
+                    </div>
+                    <div class="radio">
+                        <div class="radio-inner radio-1">
+                            <input type="radio" name="radio" id="radio1">
+                            <label class="radio-label">I'm organizing and participating</label>
+                        </div>
+                        <div class="radio-inner radio-2">
+                            <input type="radio" name="radio" id="radio2">
+                            <label class="radio-label">I'm just organizing</label>
+                        </div>
+                    </div>
+                    <div class="add-friends">
+                        <div>
+                            <div class="add-friends-label label">Add Your Friends</div>
+                            <div class="group-size-text">Got a big group? <u>Click here.</u></div>
+                        </div>
+                        <div class="add-friends-name" id="add-friends-name">
+                            <input class="friend-name" type="text" placeholder="Enter Name 1">
+                            <input class="friend-name" type="text" placeholder="Enter Name 2">
+                            <input class="friend-name" type="text" placeholder="Enter Name 3">
+                            <button type="button" class="add" onclick="addNames()">+ Add more names?</button>
+                        </div>
+                    </div>
+                    <div class="party-button-holder">
+                        <button type="button" class="party-button" onclick="goNext()">get the party started →</button>
+                        <div class="party-button-bottom-text">Don't fret! You can add more friends (or remove them) later, no sweat.</div>
+                    </div>
+                </div>
+
+                <div class="form-content-holder form-2" id="form-2">
+                    <div class="form-heading">The gifting details</div>
+                    <div class="form-start-text">
+                        Personalize your Elfster exchange below with important info guests need to know.
+                    </div>
+                    <div class="your-name-holder">
+                        <label class="your-name-label label">
+                            Name Your Elfster Exchange
+                        </label>
+                        <span class="popuptext" id="myPopup2">Please give your Gift Exchange a name.</span>
+                        <input type="text" placeholder="e.g. Elfie's Secret Santa Extravaganza" id="elf-name">
+                    </div>
+
+                    <div class="your-name-holder">
+                        <label class="your-name-label label">
+                            Set The Date
+                        </label>
+                        <span class="popuptext" id="myPopup3">Please select a gift exchange date.</span>
+                        <span class="calender"></span>
+                        <input type="date" id="set-date" class="date-input">
+                    </div>
+
+                    <div class="your-name-holder">
+                        <label class="your-name-label label">
+                            Sign-up deadline
+                        </label>
+                        <span class="popuptext" id="myPopup4">Please select a gift deadline date.</span>
+                        <span class="calender"></span>
+                        <input type="date" id="deadline-date" class="date-input">
+                    </div>
+                    
+                    <div class="sending-mail-container">
+                        <div class="sending-checkbox-text label">Sending Gifts By Mail?</div> 
+                        <div class="mail-checkbox">
+                            <div class="checkbpx-mail">
+                                <input type="checkbox">
+                            </div>
+    
+                            <div class="mail-text">
+                                By checking this box, participants will be asked to provide a mailing address where their gift should be sent
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="your-name-holder">
+                        <label class="your-name-label label">
+                            Gift Budget
+                        </label>
+                        <span class="symbol">$</span>
+                        <input type="number" value="50" inputmode="numeric" class="budget">
+                    </div>
+
+                    <div class="your-name-holder">
+                        <label class="your-name-label label">
+                            Your Email
+                        </label>
+                        <span class="popuptext" id="myPopup5">Please enter valid Email Address</span>
+                        <input type="email" placeholder="Enter email address" id="giving-email">
+                    </div>
+
+                    <div class="your-name-holder">
+                        <label class="your-name-label label">
+                            How did you hear about Elfster?
+                        </label>
+                        <span class="arrow-down"></span>
+                        <select type="text" placeholder="Enter Name" class="dropdown-heard" id="dropdown-heard">
+                            <option>No Option</option>
+                            <option>Youtube</option>
+                            <option>TikTok</option>
+                            <option>Bing</option>
+                            <option>Friend/Family</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="your-name-holder">
+                        <label class="your-name-label label">
+                            Add a Note
+                        </label>
+                        <textarea placeholder="Hey Everyone! We're exchanging gifts the super fun way-secretly! No drawing names out of an old hat. We've got Elfster to do that. Don't forget to make a Wishlist. It's how you'll score the perfect gift. See ya soon!" rows="3" style="box-sizing: border-box; overflow-y: hidden; height: 132px;"></textarea>
+                    </div>
+
+                    <div class="label">Want to<button type="button" class="select-photo" onclick="addImage()"><u>select a photo</u></button>for your event?</div>
+
+                    <div class="party-button-holder">
+                        <button type="button" class="party-button" onclick="goNext()">next, account setup →</button>
+                    </div>
+                </div>
+
+                <div class="form-content-holder form-3" id="form-3">
+                    <div class="form-heading">Whoo Hoo! Tell everyone about the gifting fun!</div>
+                    <div class="form-start-text">
+                        Your Elfster exchange is good to go.
+                        Now copy and share the note below to let your friends know!
+                    </div>
+                    <div class="name-drawn-date enter-name">Names will be drawn on <span class="drawn-date-set"></span>.</div>
+                    <div class="message-info">
+                        I created an Elfster gift exchange and you're IN! 🥳<br>
+                        <span class="elf-name-set msg-info-bold">elf name</span><br>
+                        <span class="msg-info-bold">Guests: </span><span class="guests-name-set"></span><br>
+                        <span class="msg-info-bold">date: </span><span class="date-set"></span><br>
+                        🎩 Names will be drawn on <span class="drawn-date-set"></span><br><br>
+                        🎁 Join the party: https://www.elfster.com/gift-exchanges/7b86a07e-9ec9-4165-948b-d74d14d8b57a/?join=n2i4
+                    </div>
+                    <div class="party-button-holder">
+                        <button type="button" class="party-button">copy note and share</button>
+                    </div>
+                    <div class="party-button-holder">
+                        <button type="button" class="party-button">next: create wishlist →</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-top">
+            <div class="footer-top-text footer-top-text-1">
+                <div class="footer-top-image footer-top-image-1"></div>
+                <div class="footer-top-inner-text">Trusted by 33 million people</div>
+            </div>
+            <div class="footer-top-divider"></div>
+            <div class="footer-top-text footer-top-text-2">
+                <div class="footer-top-image footer-top-image-2"></div>
+                <div class="footer-top-inner-text">4.9 stars | 234K ratings</div>
+            </div>
+            <div class="footer-top-divider"></div>
+            <div class="footer-top-text footer-top-text-3">
+                <div class="footer-top-image footer-top-image-3"></div>
+                <div class="footer-top-inner-text">#1 Secret Santa Generator</div>
+            </div>
+            <div class="hider-top"></div>
+        </div>
+
+        <div class="footer-medium">
+            <div class="footer-medium-container">
+                <div class="footer-medium-start"></div>
+    
+                <div class="footer-medium-middle">
+                    <div>About</div>
+                    <div>Advertise with Us</div>
+                    <div>Help</div>
+                    <div>Tell a Friend</div>
+                </div>
+    
+                <div class="footer-medium-end">
+                    <div class="card card-1">
+                        <div>Follow on Social:</div>
+                        <div class="icon insta"></div>
+                        <div class="icon twitter"></div>
+                        <div class="icon facebook"></div>
+                        <div class="icon pinterest"></div>
+                        <div class="icon yt"></div>
+                    </div>
+
+                    <div class="card card-2">
+                        <div class="download">
+                            Download the App:
+                        </div>
+
+                        <div class="store-images">
+                            <div class="app-store store"></div>
+                            <div class="play-store store"></div>
+                        </div>
+                    </div>
+
+                    <div class="card card-3">
+                        <div class="signup-text">
+                            Sign Up for Gifts, Giveaways & Good News!
+                        </div>
+
+                        <div class="signup-email">
+                            <input type="text" class="signup-email-input" placeholder="Enter Email">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-medium-0"></div>
+            <div class="footer-medium-1"></div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-start">© 2024 Elfster, Inc.</div>
+            <div class="footer-bottom-middle">
+                <div class="footer-bottom-middle-text">Privacy Policy</div>
+                <div class="footer-bottom-divider"></div>
+                <div class="footer-bottom-middle-text">CA Privacy Rights</div>
+                <div class="footer-bottom-divider"></div>
+                <div class="footer-bottom-middle-text">Terms Of Service</div>
+            </div>
+            <div class="footer-bottom-end">
+                <select name="country" id="country">
+                    <option value="USA">USA</option>
+                    <option value="Canada">Canada</option>
+                    <option value="UK">UK</option>
+                </select>
+            </div>
+        </div>
+    <!-- </div> -->
+</body>
+</html>
